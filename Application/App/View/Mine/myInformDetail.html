@@ -1,0 +1,48 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>BUI</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="__PUBLIC__/css/bui.css" />
+</head>
+<body>
+    <div class="bui-page">
+        <header class="bui-bar">
+            <div class="bui-bar-left">
+                <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+            </div>
+            <div class="bui-bar-main">{$news[0].ntype}</div>
+            <div class="bui-bar-right">
+                <!-- 右边按钮位置 -->
+            </div>
+        </header>
+        <main>
+            <article id="panel" class="bui-article" style="height:100%;">
+                <h1>{$news[0].ncontent}</h1>
+                <div class="article-info bui-box">
+                    <span class="article-from">{$news[0].ntype}</span>
+                    <div class="span1"> <i class="icon-time"> {$news[0].ntime}</i></div>
+                    <!--<i class="icon-comment"> 42</i>-->
+                    <!--<i class="icon-eye"> 142</i>-->
+                </div>
+                <section>
+                    <p>{$news[0].ncontentmore}</p>
+                    <p></p>
+                </section>
+            </article>
+        </main>
+        <footer>
+            <!-- 底部内容 此处内容固定在页面底部 -->
+        </footer>
+    </div>
+    <script src="__PUBLIC__/js/zepto.js"></script>
+    <script src="__PUBLIC__/js/bui.js"></script>
+    <script>
+        bui.ready(function () {
+            // 控件初始化
+        })
+    </script>
+</body>
+</html>

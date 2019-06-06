@@ -1,0 +1,6 @@
+[ 2019-03-16T20:28:01+08:00 ] ::1 /PHPlab/demo/index.php/User/showlogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000693s ]
+ERR: 无法加载模块:User
+

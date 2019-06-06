@@ -1,0 +1,6 @@
+[ 2019-03-07T16:51:11+08:00 ] ::1 /PHPlab/lab6/inde.php/home/user/showlogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+ERR: 无法加载模块:Inde.php
+

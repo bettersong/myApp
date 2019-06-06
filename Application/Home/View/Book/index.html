@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{margin:0;padding:0}
+        table{margin:20px auto}
+        .head{width:100%;height:60px;line-height:60px;}
+        .h-mid{text-align:center}
+        .h-login{float:right;margin-top:-40px;margin-right:20px;}
+        .main{width:100%;}
+        .main_top{width:80%;margin:10px auto;}
+        .page{width:400px;margin:0px auto;float: right;}
+        .bookname{height:20px}
+        #seach{width:50px;height:25px;background:cornflowerblue;border:none;margin-left:10px;font-size:14px;vertical-align: middle;}
+    </style>
+</head>
+<body>
+<div class="head">
+    <div class="h-mid">
+        <h3>首页</h3>
+    </div>
+   <div class="h-login">
+       <if condition="isset($_SESSION['username'])"> 欢迎{$_SESSION['username']}
+           <span><a href="__ROOT__/Home/User/logout">退出</a> </span>
+           <else />
+           <a href="__ROOT__/Home/User/showlogin">登录</a>
+           <a href="__ROOT__/Home/User/showregist">注册</a>
+       </if>
+
+
+   </div>
+</div>
+<div>
+    <span id="test">AJAX测试</span>
+</div>
+<div class="main">
+    <div class="main_top">
+        <a href="__ROOT__/Home/Book/showadd">添加</a>
+        <form action="__ROOT__/Home/Book/userselect" method="post">
+        查询书籍：<input type="text" value="{$bookname}" class="bookname" name="bname">
+            <button id="seach">搜索</button>
+        </form>
+    </div>
+    <table width="800" border="1">
+        <tr>
+            <td>编号</td>
+            <td>书名</td>
+            <td>作者</td>
+            <td>数量</td>
+            <td>价格</td>
+            <td>操作</td>
+        </tr>
+        <volist name="data" id="book">
+            <tr>
+                <td>{$book.bid}</td>
+                <td>{$book.bname}</td>
+                <td>{$book.author}</td>
+                <td>{$book.collect_count}</td>
+                <td>{$book.price}</td>
+                <td><a href="__ROOT__/Home/Book/showupdate?bid={$book.bid}&author={$book.author}&bname={$book.bname}&price={$book.price}&collect_count={$book.collect_count}">修改</a>/<a href="__ROOT__/Home/Book/delete?bid={$book.bid}"> 删除</a></td>
+            </tr>
+        </volist>
+
+    </table>
+    <div class="page">
+        {$page}
+    </div>
+    </div>
+</div>
+<script src="__ROOT__/public/js/jquery.js"></script>
+<script>
+    console.log('__APP__');
+    console.log('__ROOT__');
+    console.log('__ROOT__/Home/Book/showupdate?');
+    $('#test').on('click',function(){
+
+        var bid = 2;
+        $.ajax({
+            async:false,
+            type: "post",
+            data: {
+                "bid":bid,
+            },
+            dataType: 'json',
+            url: "__ROOT__/Home/Book/test",
+            success: function (msg) {
+                alert(msg[0]['author']);
+                console.log(msg);
+            },
+            error: function (msg) {
+                alert(msg.status + "服务繁忙，请刷新或稍后再试。");
+            }
+        });
+    })
+</script>
+
+</body>
+</html>

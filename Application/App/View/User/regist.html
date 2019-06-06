@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
+    <title>商城</title>
+    <link rel="stylesheet" href="__PUBLIC__/css/bui.css" />
+</head>
+<body>
+<div class="bui-page login">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">注册</div>
+        <div class="bui-bar-right"></div>
+    </header>
+    <main>
+
+            <div class="bui-list">
+                <div class="bui-btn bui-box clearactive">
+                    <div class="bui-label">用户名</div>
+                    <div class="span1">
+                        <input type="text" id="username" name="username" class="bui-input" value="" placeholder="用户名">
+                    </div>
+                </div>
+                <div class="bui-btn bui-box clearactive">
+                    <div class="bui-label">密&nbsp;&nbsp;&nbsp;码</div>
+                    <div class="span1">
+                        <input type="password" id="password" name="password" class="bui-input" value="" placeholder="密码">
+                    </div>
+                </div>
+            </div>
+            <div class="container-xy">
+                <div class="bui-btn round success" id="register">立即注册</div>
+            </div>
+
+
+    </main>
+</div>
+<script src="__PUBLIC__/js/zepto.js"></script>
+<script src="__PUBLIC__/js/bui-1.5.2.js"></script>
+<script>
+    bui.ready(function(){
+        console.log('__ROOT__');
+        $('#register').on('click',function(){
+            //var bid = 2;
+            var username = $('#username').val();
+            var password = $('#password').val();
+            if(username == '' || password == ''){
+                bui.alert('账号或密码不能为空！');
+                return false;
+            }
+            console.log(username,password);
+            //return false;
+            $.ajax({
+                async:false,
+                type: "post",
+                data: {
+                    "username":username,
+                    "password":password
+                },
+                dataType: 'json',
+                url: "__ROOT__/App/User/registAction",
+                success: function (msg) {
+                    //alert(msg[0]['author']);
+                    bui.alert("注册成功！");
+                },
+                error: function (msg) {
+                    //console.log(msg);
+                    //bui.alert(666);
+                    bui.alert(msg.response);
+                }
+            });
+        })
+    })
+
+</script>
+</body>
+</html>

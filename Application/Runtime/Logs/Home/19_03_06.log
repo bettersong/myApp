@@ -1,0 +1,20 @@
+[ 2019-03-06T23:14:52+08:00 ] ::1 /PHPlab/lab6/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000128s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.034992s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.035243s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.029902s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.029960s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.145217s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.145360s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000479s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000656s ]
+INFO: [ app_end ] --END-- [ RunTime:0.000678s ]
+

@@ -1,0 +1,222 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>商城</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="__PUBLIC__/css/bui.css" />
+    <style>
+        .big-title{font-weight: bold;color:#000;}
+
+    </style>
+</head>
+<body>
+<div class="bui-page" id="page">
+    <header>
+        <div class="bui-bar">
+            <div class="bui-bar-left">
+            </div>
+            <div class="bui-bar-main">首页</div>
+            <div class="bui-bar-right">
+            </div>
+        </div>
+    </header>
+    <main>
+        <div id="slide" class="bui-slide bui-slide-skin01">
+            <div class="bui-slide-main">
+                <ul>
+                    <li>
+                        <img src="__PUBLIC__/images/1.jpg" alt="占位图">
+                    </li>
+                    <li style="display: none;">
+                        <img src="__PUBLIC__/images/2.jpg" alt="占位图">
+                    </li>
+                    <li style="display: none;">
+                        <img src="__PUBLIC__/images/3.jpg" alt="占位图">
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div id="slideNote" class="bui-slide bui-slide-notice">
+            <div class="bui-slide-main">
+                <ul>
+                    <li>
+                        <div class="notice-item">
+                            <div class="span1">2019年1月1日 妖刀魔幻动漫更新啦！</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="notice-item">
+                            <div class="span1">2019年2月1日 都来看看啦！</div>
+                        </div>
+                    </li>
+                    <li>
+                        <div class="notice-item">
+                            <div class="span1">2019年3月1日 说些什么呢！</div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="bui-panel panel-photo">
+            <ul class="bui-list-pic">
+                <li class="bui-box-center bui-nav">
+                    <div class="bui-btn bui-box-vertical bui-box-align-center span1" href="__ROOT__/App/Booknav/Classification">
+                        <div class="span1"><img src="__PUBLIC__/images/icon-png/icon-fenlei.png"> </div>
+                        <div class="span1">分类</div>
+                    </div>
+                    <div class="bui-btn bui-box-vertical bui-box-align-center span1" href="__ROOT__/App/Booknav/Ranking">
+                        <div class="span1"><img src="__PUBLIC__/images/icon-png/icon-paihang.png"> </div>
+                        <div class="span1">排行</div>
+                    </div>
+                    <div class="bui-btn bui-box-vertical bui-box-align-center span1" href="__ROOT__/App/Booknav/FreeBook">
+                        <div class="span1"><img src="__PUBLIC__/images/icon-png/icon-mianfei.png"> </div>
+                        <div class="span1">免费</div>
+                    </div>
+                    <div class="bui-btn bui-box-vertical bui-box-align-center span1" href="__ROOT__/App/Booknav/VipBook">
+                        <div class="span1"><img src="__PUBLIC__/images/icon-png/icon-vip.png"> </div>
+                        <div class="span1">VIP</div>
+                    </div>
+                    <div class="bui-btn bui-box-vertical bui-box-align-center span1" href="__ROOT__/App/Booknav/AssignBook">
+                        <div class="span1"><img src="__PUBLIC__/images/icon-png/icon-qiaodao.png"> </div>
+                        <div class="span1">签到</div>
+                    </div>
+                </li>
+                <li class="bui-list-pic">
+                    <div class="bui-box-align-justify">
+                        <div class="span1">
+                            <div class="big-title bui-btn bui-box-align-left" style="border:none;">热门畅销</div>
+                        </div>
+                        <div class="span1">
+                            <div class="bui-btn span1 bui-box-align-right" style="border:none;">
+                                <span class="small">查看更多</span>
+                                <a><i class="icon-listright"></i> </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="bui-btn bui-box-space container-full">
+                        <volist name="hot" id="hotBook">
+                        <div class="span1">
+                            <div class="bui-pic bui-btn" style="padding:0px;border:none;">
+                                <div class="bui-thumbnail bui-sub {$hotBook.bookmarkcolor}" data-sub="{$hotBook.bookmark}">
+                                    <img src="__PUBLIC__/images/{$hotBook.image}" alt=""></div>
+                                <p class="bui-pic-text">{$hotBook.bname}</p>
+                            </div>
+                        </div>
+                        </volist>
+
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <!--新品发售-->
+        <ul class="bui-list-pic" style="margin-top:3%">
+            <li class="bui-list">
+                <div class="bui-box-align-justify">
+                    <div class="span1">
+                        <div class="big-title bui-btn bui-box-align-left" style="border:none;">新品发售</div>
+                    </div>
+                    <div class="span1">
+                        <div class="bui-btn span1 bui-box-align-right" style="border:none;">查看更多
+                            <a><i class="icon-listright"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bui-btn bui-box-space container-full">
+                    <volist name="new" id="newBook">
+                        <div class="span1">
+                            <div class="bui-pic bui-btn" style="padding:0px;border:none;">
+                                <div class="bui-thumbnail bui-sub {$newBook.bookmarkcolor}" data-sub="{$newBook.bookmark}">
+                                    <img src="__PUBLIC__/images/{$newBook.image}" alt=""></div>
+                                <p class="bui-pic-text">{$newBook.bname}</p>
+                            </div>
+                        </div>
+                    </volist>
+                </div>
+            </li>
+        </ul>
+        <!--经典阅读-->
+        <ul class="bui-list-pic" style="margin-top:3%">
+            <li class="bui-list">
+                <div class="bui-box-align-justify">
+                    <div class="span1">
+                        <div class="big-title bui-btn bui-box-align-left" style="border:none;">经典阅读</div>
+                    </div>
+                    <div class="span1">
+                        <div class="bui-btn span1 bui-box-align-right" style="border:none;">查看更多
+                            <a><i class="icon-listright"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bui-btn bui-box-space container-full">
+                    <volist name="jing" id="jingBook">
+                        <div class="span1">
+                            <div class="bui-pic bui-btn" style="padding:0px;border:none;">
+                                <div class="bui-thumbnail bui-sub {$jingBook.bookmarkcolor}" data-sub="{$jingBook.bookmark}">
+                                    <img src="__PUBLIC__/images/{$jingBook.image}" alt=""></div>
+                                <p class="bui-pic-text">{$jingBook.bname}</p>
+                            </div>
+                        </div>
+                    </volist>
+                </div>
+            </li>
+        </ul>
+        <!--限时免费-->
+        <ul class="bui-list-pic" style="margin-top:3%">
+            <li class="bui-list">
+                <div class="bui-box-align-justify">
+                    <div class="span1">
+                        <div class="big-title bui-btn bui-box-align-left" style="border:none;">限时免费</div>
+                    </div>
+                    <div class="span1">
+                        <div class="bui-btn span1 bui-box-align-right" style="border:none;">查看更多
+                            <a><i class="icon-listright"></i> </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="bui-btn bui-box-space container-full">
+                    <volist name="mian" id="mianBook">
+                        <div class="span1">
+                            <div class="bui-pic bui-btn" style="padding:0px;border:none;">
+                                <div class="bui-thumbnail bui-sub {$mianBook.bookmarkcolor}" data-sub="{$mianBook.bookmark}">
+                                    <img src="__PUBLIC__/images/{$mianBook.image}" alt=""></div>
+                                <p class="bui-pic-text">{$mianBook.bname}</p>
+                            </div>
+                        </div>
+                    </volist>
+                </div>
+            </li>
+        </ul>
+
+    </main>
+    <script src="__PUBLIC__/js/zepto.js"></script>
+    <script src="__PUBLIC__/js/bui-1.5.2.js"></script>
+    <script>
+        bui.ready(function () {
+            // 控件初始化
+            var uiBtn = bui.btn({id:'#page',handle:'.bui-btn'}).load();
+            //轮播图
+            var uiSlide = bui.slide({
+                id: "#slide",
+                height: 380,
+                autopage: true,
+                autoplay:true,
+                loop: true,
+            })
+
+            //通知
+            // 通知
+            var newsSlide = bui.slide({
+                id:"#slideNote",
+                height:100,
+                autoplay: true,
+                loop: true,
+                zoom: true,
+                direction: "y"
+            })
+
+        })
+    </script>
+</body>
+</html>

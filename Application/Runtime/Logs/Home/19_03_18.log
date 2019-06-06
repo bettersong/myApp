@@ -1,0 +1,28 @@
+[ 2019-03-18T08:09:13+08:00 ] ::1 /AppLab/demo/
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000035s ]
+INFO: [ app_init ] --END-- [ RunTime:0.052112s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.017190s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.017288s ]
+INFO: [ view_parse ] --START--
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.049423s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.049503s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.079289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.079423s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.007110s ]
+INFO: [ app_end ] --END-- [ RunTime:0.007166s ]
+
+[ 2019-03-18T08:10:27+08:00 ] ::1 /AppLab/demo/Home/User/setlogin
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000817s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000876s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.1162s ]
+SQL: SHOW COLUMNS FROM `user` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `user` WHERE ( username='宋瑶' AND password = '123456' ) LIMIT 1   [ RunTime:0.0016s ]
+

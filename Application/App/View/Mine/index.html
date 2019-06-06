@@ -1,0 +1,87 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>BUI</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="__PUBLIC__/css/bui.css" />
+    <style>
+        .mineImg{width:100px;height:100px;}
+        .bui-dropdown>.active {background: #39a4ff !important;}
+    </style>
+</head>
+<body>
+
+<div class="bui-page">
+    <header class="bui-bar bui-bar-center">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">
+          我的信息
+        </div>
+        <div class="bui-bar-right">
+        </div>
+    </header>
+    <main>
+        <div class="section-title"></div>
+        <ul class="bui-list">
+            <li class="bui-box bui-btn bui-nav-icon">
+                <div class="span1"><i class="icon-phone primary small">&#xe603;</i>
+                    <span>手机号</span>
+                </div>
+                <a href="">
+                    <i class="icon-listright"></i>
+                </a>
+            </li>
+            <li class="bui-box bui-btn bui-nav-icon">
+                <div class="span1"><i class="icon-反馈 success small">&#xe62d;</i>
+                    <span>我的订单</span>
+                </div>
+                <a href="">
+                    <i class="icon-listright"></i>
+                </a>
+            </li>
+            <li class="bui-box bui-btn bui-nav-icon">
+                <div class="span1"><i class="icon-settings warning small">&#xe612;</i>
+                    <span>修改密码</span>
+                </div>
+                <a href="">
+                    <i class="icon-listright"></i>
+                </a>
+            </li>
+            <li class="bui-box bui-btn bui-nav-icon">
+                <div class="span1"><i class="icon-doubt danger small"></i>
+                    <span>帮助</span>
+                </div>
+                <a href="">
+                    <i class="icon-listright"></i>
+                </a>
+            </li>
+            <li class="section-title"></li>
+
+        </ul>
+    </main>
+    <footer>
+
+    </footer>
+</div>
+
+
+<script src="__PUBLIC__/js/zepto.js"></script>
+<script src="__PUBLIC__/js/bui-1.5.2.js"></script>
+<script>
+    bui.ready(function () {
+        // 控件初始化
+
+        var tab = bui.tab({
+            id:"#tabDynamic",
+            menu:"#tabDynamicNav",
+            // 1: 声明是动态加载的tab
+            autoload: true,
+        })
+    })
+</script>
+</body>
+</html>

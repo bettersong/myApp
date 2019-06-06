@@ -1,0 +1,100 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>妖刀</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="__PUBLIC__/css/bui.css" />
+    <style>
+        .bui-dialog-foot-nav {
+            bottom: 1rem;
+            display: none;
+        }
+    </style>
+</head>
+<div class="bui-page">
+    <header>
+
+
+    </header>
+
+    <main style="height: 100%;">
+        <!-- tab内容结构 -->
+        <div id="tabDynamic" class="bui-tab">
+            <div class="bui-tab-main">
+                <ul>
+                    <li>
+                        <!-- 首页 -->
+                    </li>
+                    <li style="display: none;">
+                        <!-- 订单 -->
+                    </li>
+                    <li style="display: none;">
+                        <!-- 消息 -->
+                    </li>
+                    <li style="display: none;">
+                        <!-- 我的 -->
+                    </li>
+                </ul>
+
+            </div>
+        </div>
+
+
+    </main>
+    <footer>
+        <ul id="tabDynamicNav" class="bui-nav">
+            <li class="bui-btn bui-box-vertical active" href="__ROOT__/App/Index/pageone"><i class="icon-home"></i><div class="span1">首页</div></li>
+            <li class="bui-btn bui-box-vertical" href="__ROOT__/App/Book/index"><i class="icon-edit"></i><div class="span1">书城</div></li>
+            <li class="bui-btn bui-box-vertical" href="__ROOT__/App/Shopcar/index"><i class="icon-购物车">&#xe631;<span class="bui-badges"></span></i><div class="span1">购物车</div></li>
+            <li class="bui-btn bui-box-vertical" href="__ROOT__/App/User/index"><i class="icon-my">&#xe610;</i><div class="span1">我的</div></li>
+        </ul>
+    </footer>
+</div>
+
+
+
+<script src="__PUBLIC__/js/zepto.js"></script>
+<script src="__PUBLIC__/js/bui-1.5.2.js"></script>
+<script>
+    bui.ready(function(){
+        //按钮在tab外层,需要传id
+        var tab = bui.tab({
+            id:"#tabDynamic",
+            menu:"#tabDynamicNav",
+            // 1: 声明是动态加载的tab
+            autoload: true,
+        })
+
+
+
+        var pageview = {};
+        // 页面初始化定义
+        pageview.init = function(){
+
+            //数据挂载
+            var bs = bui.store({
+                scope:"page",
+                data:{
+                    msg:'wo',
+                },
+                beforeMount:function(){
+                    //数据解析之前执行
+
+                },
+                mounted:function(){
+                    //数据解析时执行
+                }
+            })
+
+        };
+
+        // 初始化
+        pageview.init();
+
+    });
+</script>
+</body>
+</html>

@@ -1,0 +1,12 @@
+[ 2019-03-15T10:52:52+08:00 ] ::1 /PHPlab/demo/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000083s ]
+INFO: [ app_init ] --END-- [ RunTime:0.008370s ]
+ERR: 无法加载模块:Index
+
+[ 2019-03-15T10:53:02+08:00 ] ::1 /PHPlab/demo/index/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.003288s ]
+ERR: 无法加载模块:Index
+

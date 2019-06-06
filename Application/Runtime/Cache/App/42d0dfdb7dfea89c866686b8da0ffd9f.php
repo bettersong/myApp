@@ -1,0 +1,82 @@
+<?php if (!defined('THINK_PATH')) exit();?><!DOCTYPE HTML>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8" />
+    <title>妖刀商城</title>
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="/MyApp/YaoDaoApp/Public/css/bui.css" />
+    <style>
+        .bookList{margin-top:.2rem;}
+    </style>
+</head>
+<body>
+<div class="bui-page">
+    <header class="bui-bar">
+        <div class="bui-bar-left">
+            <a class="bui-btn" onclick="bui.back();"><i class="icon-back"></i></a>
+        </div>
+        <div class="bui-bar-main">排行</div>
+        <div class="bui-bar-right">
+            <!-- 右边按钮位置 -->
+        </div>
+    </header>
+    <main>
+        <div class="bui-tab-wrap bui-box" style="padding-left: 2rem;">
+            <ul id="tabSideNav" class="bui-list bui-tab-sidenav" style="width: 2rem;">
+                <li class="bui-btn">畅销周榜</li>
+                <li class="bui-btn">特价好书</li>
+                <li class="bui-btn">人气新书</li>
+                <li class="bui-btn">豆瓣评分</li>
+                <li class="bui-btn">当当人气</li>
+                <li class="bui-btn">VIP排行</li>
+            </ul>
+            <div id="tabSide" class="bui-tab">
+                <div class="bui-tab-main">
+                    <ul class="bookList">
+                        <li>
+                            敬请期待1
+                        </li>
+                        <li style="display: none;">
+                            敬请期待2
+                        </li>
+                        <li style="display: none;">
+                            敬请期待3
+                        </li>
+                        <li style="display: none;">
+                            敬请期待4
+                        </li>
+                        <li style="display: none;">
+                            敬请期待5
+                        </li>
+                        <li style="display: none;">
+                            敬请期待6
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <!-- 底部内容 此处内容固定在页面底部 -->
+    </footer>
+</div>
+<script src="/MyApp/YaoDaoApp/Public/js/zepto.js"></script>
+<script src="/MyApp/YaoDaoApp/Public/js/bui.js"></script>
+<script>
+    bui.ready(function () {
+        // 控件初始化
+        var tabWidth = $(window).width() - $("#tabSideNav").width();
+
+        //按钮在tab外层,需要传id
+        var tab = bui.tab({
+            id:"#tabSide",
+            menu:"#tabSideNav",
+            width: tabWidth,
+            direction: "y",
+            animate: false
+        })
+    })
+</script>
+</body>
+</html>
